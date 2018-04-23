@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureCalculator", "TemperatureCalculator\TemperatureCalculator.csproj", "{182C1DEC-5AE6-4FF7-A6A9-6DC7EA1A9053}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{182C1DEC-5AE6-4FF7-A6A9-6DC7EA1A9053}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{182C1DEC-5AE6-4FF7-A6A9-6DC7EA1A9053}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{182C1DEC-5AE6-4FF7-A6A9-6DC7EA1A9053}.Release|iPhone.ActiveCfg = Release|iPhone
+		{182C1DEC-5AE6-4FF7-A6A9-6DC7EA1A9053}.Release|iPhone.Build.0 = Release|iPhone
+		{182C1DEC-5AE6-4FF7-A6A9-6DC7EA1A9053}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{182C1DEC-5AE6-4FF7-A6A9-6DC7EA1A9053}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{182C1DEC-5AE6-4FF7-A6A9-6DC7EA1A9053}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{182C1DEC-5AE6-4FF7-A6A9-6DC7EA1A9053}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal
