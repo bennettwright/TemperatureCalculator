@@ -1,5 +1,4 @@
 ﻿using System;
-using Math
 namespace TemperatureCalculator
 {
     public class calculate
@@ -16,14 +15,14 @@ namespace TemperatureCalculator
         public static double getTemp(string fDegrees, int windSpeed)
         {
             if (validator(fDegrees))
-                return E1 + (E2 * fahrenheit) - Math.Pow(E3 * windSpeed, E5) 
-                                                    + (E4 * fahrenheit) * Math.Pow(windSpeed, E5);
+                return (35.74 + (0.6215 * fahrenheit) - Math.Pow(35.75 * windSpeed, 0.16) 
+                        + (0.4275 * fahrenheit) * Math.Pow(windSpeed, 0.16));
             throw new ArgumentException("Not valid input");
         }
 
         public static double getTemp(string fehrenheit, string humidity, int windSpeed)
         {
-            
+            throw new NotImplementedException();
         }
 
 
