@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Diagnostics;
 using UIKit;
 
 namespace TemperatureCalculator
@@ -12,13 +12,16 @@ namespace TemperatureCalculator
         }
 
         private bool humid = false;
+        double temp;
         private void compute(object sender, EventArgs args)
         {
+            temp = Double.Parse(FahrenheitField.Text);
             try
             {
                 if (!humid)
                     ResultLabel.Text = String.Format("Result: {0:0.00}", 
-                                                     calculate.getTemp(FahrenheitField.Text, (int)WindSlider.Value));
+                                                     calculate.getTemp(Double.Parse(FahrenheitField.Text), (int)WindSlider.Value));
+                Debug.WriteLine("temp: {0}", temp);
             }
             catch(ArgumentException ex)
             {
@@ -35,14 +38,29 @@ namespace TemperatureCalculator
             {
                 humid = HumiditySwitch.On;
                 HumidityField.Enabled = HumiditySwitch.On;
+
             };
 
-            FahrenheitField.EditingDidEndOnExit += (sender, e) =>
+            //dismiss the keyboard on background touch
+            View.AddGestureRecognizer(new UITapGestureRecognizer(() => 
+            {
+                FahrenheitField.ResignFirstResponder();
+                HumidityField.ResignFirstResponder();
+            }));
+
+            FahrenheitField.EditingDidEnd += (sender, e) =>
             {
                 compute(sender, e);
-                ((UITextField)sender).ResignFirstResponder();
+                WindSlider.Enabled = true;
             };
-            WindSlider.ValueChanged += compute;
+
+
+            WindSlider.ValueChanged += (sender, e) =>
+            {
+                WindSpeedLabel.Text = String.Format("Wind Speed (0-100 mph): {0}", (int)WindSlider.Value);
+                compute(sender, e);
+
+            };
 
         }
 

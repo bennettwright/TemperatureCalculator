@@ -7,31 +7,25 @@ namespace TemperatureCalculator
         {
         }
 
-        private static double fahrenheit, humidity;
-
         //equation variables
         const double E1 = 35.74, E2 = 0.6215, E3 = 35.75, E4 = 0.4275, E5 = 0.16;
 
-        public static double getTemp(string fDegrees, int windSpeed)
+        public static double getTemp(double fDegrees, int windSpeed)
         {
-            if (validator(fDegrees))
-                return (35.74 + (0.6215 * fahrenheit) - Math.Pow(35.75 * windSpeed, 0.16) 
-                        + (0.4275 * fahrenheit) * Math.Pow(windSpeed, 0.16));
-            throw new ArgumentException("Not valid input");
+            //temperature has to be below 50 degrees fahrenheit and
+            //wind speed has to be above 3mph before wind chill can
+            //take place
+            if (fDegrees < 50 && windSpeed > 3)
+                return 35.74 + (0.6215 * fDegrees) - 35.75 * Math.Pow(windSpeed, 0.16)
+                 + (0.4275 * fDegrees) * Math.Pow(windSpeed, 0.16);
+
+            else
+                return fDegrees;
         }
 
-        public static double getTemp(string fehrenheit, string humidity, int windSpeed)
+        public static double getTemp(double fehrenheit, string humidity, int windSpeed)
         {
             throw new NotImplementedException();
         }
-
-
-        //making humid null by default because we don't need humidity
-        //in order to get the temp....and don't want to be passing null
-        //in the params every time
-        private static bool validator(string fDegrees, string humid = null) =>
-            (humid == null) ? Double.TryParse(fDegrees, out fahrenheit) :
-                                    Double.TryParse(fDegrees, out fahrenheit) &&
-                                            Double.TryParse(humid, out humidity);
     }
 }

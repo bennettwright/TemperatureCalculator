@@ -32,28 +32,28 @@
                                 <rect key="frame" x="67.5" y="378" width="240" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <constraints>
                                     <constraint id="233" firstItem="198" firstAttribute="height" constant="30"/>
                                     <constraint id="234" firstItem="198" firstAttribute="width" constant="240"/>
                                 </constraints>
                                 <connections/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0" minValue="0.0" maxValue="100" id="199" translatesAutoresizingMaskIntoConstraints="NO">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0" minValue="0.0" maxValue="100" id="199" translatesAutoresizingMaskIntoConstraints="NO" enabled="NO">
                                 <rect key="frame" x="67.5" y="443" width="240" height="31"/>
                                 <constraints>
                                     <constraint id="250" firstItem="199" firstAttribute="height" constant="30"/>
                                     <constraint id="251" firstItem="199" firstAttribute="width" constant="236"/>
                                 </constraints>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Speed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="201" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="67.5" y="421" width="119" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Speed (0-100 mph):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="201" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="68" y="421" width="189" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <constraints>
-                                    <constraint id="238" firstItem="201" firstAttribute="height" constant="21"/>
-                                    <constraint id="239" firstItem="201" firstAttribute="width" constant="119"/>
+                                    <constraint id="778" firstItem="201" firstAttribute="height" constant="21"/>
+                                    <constraint id="779" firstItem="201" firstAttribute="width" constant="189"/>
                                 </constraints>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="203" translatesAutoresizingMaskIntoConstraints="NO">
@@ -63,7 +63,7 @@
                                 <rect key="frame" x="67.5" y="333" width="240" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <constraints>
                                     <constraint id="229" firstItem="204" firstAttribute="height" constant="30"/>
                                     <constraint id="230" firstItem="204" firstAttribute="width" constant="240"/>
