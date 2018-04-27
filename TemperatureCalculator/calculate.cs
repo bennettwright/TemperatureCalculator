@@ -7,10 +7,7 @@ namespace TemperatureCalculator
         {
         }
 
-        //equation variables
-        const double E1 = 35.74, E2 = 0.6215, E3 = 35.75, E4 = 0.4275, E5 = 0.16;
-
-        public static double getTemp(double fDegrees, int windSpeed)
+        public static double getWindChill(double fDegrees, int windSpeed)
         {
             //temperature has to be below 50 degrees fahrenheit and
             //wind speed has to be above 3mph before wind chill can
@@ -23,9 +20,15 @@ namespace TemperatureCalculator
                 return fDegrees;
         }
 
-        public static double getTemp(double fehrenheit, string humidity, int windSpeed)
+        public static double getHeatIndex(double fehrenheit, double humidity)
         {
-            throw new NotImplementedException();
+            return    -42.379 + (2.04901523 * fehrenheit) + (10.14333127 * humidity)
+                         - (0.22475541 * fehrenheit * humidity) 
+                         - (6.83783 * Math.Pow(10, -3) * Math.Pow(fehrenheit, 2))
+                         - (5.481717 * Math.Pow(10, -2)  * Math.Pow(humidity, 2))
+                         + (1.22874 * Math.Pow(10, -3) * Math.Pow(fehrenheit, 2) * humidity)
+                         + (8.5282 * Math.Pow(10, -4) * fehrenheit * Math.Pow(humidity, 2))
+                         - (1.99 * Math.Pow(10, -6) * Math.Pow(fehrenheit, 2) * Math.Pow(humidity, 2));
         }
     }
 }

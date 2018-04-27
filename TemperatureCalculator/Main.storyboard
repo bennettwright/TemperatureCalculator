@@ -32,7 +32,7 @@
                                 <rect key="frame" x="67.5" y="378" width="240" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <constraints>
                                     <constraint id="233" firstItem="198" firstAttribute="height" constant="30"/>
                                     <constraint id="234" firstItem="198" firstAttribute="width" constant="240"/>
