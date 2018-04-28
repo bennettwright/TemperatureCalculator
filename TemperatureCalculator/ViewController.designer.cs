@@ -41,6 +41,10 @@ namespace TemperatureCalculator
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel WindSpeedLabel { get; set; }
 
+        [Action ("switchActionSheet:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void switchActionSheet (UIKit.UISwitch sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (FahrenheitField != null) {

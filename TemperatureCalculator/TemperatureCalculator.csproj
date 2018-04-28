@@ -85,9 +85,16 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Sunny.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Sunny.imageset\sunny icon 1x.jpeg" />
+    <ImageAsset Include="Assets.xcassets\Sunny.imageset\sunny 3x.jpeg" />
+    <ImageAsset Include="Assets.xcassets\Sunny.imageset\sunny 2x.jpeg" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Thermometer 120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Thermometer 180.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\Sunny.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

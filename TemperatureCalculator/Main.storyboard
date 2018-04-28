@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,83 +17,109 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="197" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="67.5" y="97" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="197" translatesAutoresizingMaskIntoConstraints="NO" image="Sunny">
+                                <rect key="frame" x="67.5" y="100.5" width="240" height="128"/>
                                 <constraints>
-                                    <constraint id="223" firstItem="197" firstAttribute="height" constant="128"/>
-                                    <constraint id="224" firstItem="197" firstAttribute="width" constant="240"/>
+                                    <constraint id="1045" firstItem="197" firstAttribute="height" constant="128"/>
+                                    <constraint id="1046" firstItem="197" firstAttribute="width" constant="240"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="198" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Degrees in Fahrenheit">
-                                <rect key="frame" x="67.5" y="378" width="240" height="30"/>
+                                <rect key="frame" x="67.5" y="381" width="240" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <constraints>
-                                    <constraint id="233" firstItem="198" firstAttribute="height" constant="30"/>
-                                    <constraint id="234" firstItem="198" firstAttribute="width" constant="240"/>
-                                </constraints>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                                 <connections/>
-                            </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0" minValue="0.0" maxValue="100" id="199" translatesAutoresizingMaskIntoConstraints="NO" enabled="NO">
-                                <rect key="frame" x="67.5" y="443" width="240" height="31"/>
                                 <constraints>
-                                    <constraint id="250" firstItem="199" firstAttribute="height" constant="30"/>
-                                    <constraint id="251" firstItem="199" firstAttribute="width" constant="236"/>
+                                    <constraint id="1062" firstItem="198" firstAttribute="width" constant="240"/>
+                                </constraints>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0" minValue="0.0" maxValue="100" id="199" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="67.5" y="446" width="240" height="31"/>
+                                <constraints>
+                                    <constraint id="1070" firstItem="199" firstAttribute="width" constant="236"/>
+                                    <constraint id="1071" firstItem="199" firstAttribute="height" constant="30"/>
                                 </constraints>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Speed (0-100 mph):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="201" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="68" y="421" width="189" height="21"/>
+                                <rect key="frame" x="67.5" y="424" width="189" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <constraints>
-                                    <constraint id="778" firstItem="201" firstAttribute="height" constant="21"/>
-                                    <constraint id="779" firstItem="201" firstAttribute="width" constant="189"/>
+                                    <constraint id="1066" firstItem="201" firstAttribute="width" constant="189"/>
+                                    <constraint id="1067" firstItem="201" firstAttribute="height" constant="21"/>
                                 </constraints>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="203" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="67.5" y="285" width="51" height="31"/>
+                                <rect key="frame" x="67.5" y="288.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchActionSheet:" destination="BYZ-38-t0r" id="1355" eventType="valueChanged"/>
+                                </connections>
                             </switch>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="204" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Humidity %" enabled="NO">
-                                <rect key="frame" x="67.5" y="333" width="240" height="30"/>
+                                <rect key="frame" x="144.5" y="287.5" width="163" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" keyboardAppearance="alert"/>
                                 <constraints>
-                                    <constraint id="229" firstItem="204" firstAttribute="height" constant="30"/>
-                                    <constraint id="230" firstItem="204" firstAttribute="width" constant="240"/>
+                                    <constraint id="1056" firstItem="204" firstAttribute="width" constant="163"/>
                                 </constraints>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="206" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="67.5" y="526" width="240" height="20.5"/>
+                                <rect key="frame" x="68.5" y="514" width="240" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <constraints>
-                                    <constraint id="254" firstItem="206" firstAttribute="width" constant="240"/>
+                                    <constraint id="1079" firstItem="206" firstAttribute="width" constant="240"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1041" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="41.5" y="260.5" width="128" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="1050" firstItem="1041" firstAttribute="height" constant="20"/>
+                                    <constraint id="1051" firstItem="1041" firstAttribute="width" constant="128"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1042" translatesAutoresizingMaskIntoConstraints="NO" text="Temperature:">
+                                <rect key="frame" x="58.5" y="352.5" width="128" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="1059" firstItem="1042" firstAttribute="width" constant="128"/>
                                 </constraints>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint id="221" firstItem="197" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
-                            <constraint id="222" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="197" secondAttribute="centerY" constant="245"/>
-                            <constraint id="225" firstItem="197" firstAttribute="leading" secondItem="203" secondAttribute="leading"/>
-                            <constraint id="226" firstItem="203" firstAttribute="top" secondItem="197" secondAttribute="bottom" constant="60"/>
-                            <constraint id="227" firstItem="203" firstAttribute="leading" secondItem="204" secondAttribute="leading"/>
-                            <constraint id="228" firstItem="204" firstAttribute="top" secondItem="203" secondAttribute="bottom" constant="17"/>
-                            <constraint id="231" firstItem="198" firstAttribute="leading" secondItem="204" secondAttribute="leading"/>
-                            <constraint id="232" firstItem="198" firstAttribute="top" secondItem="204" secondAttribute="bottom" constant="15"/>
-                            <constraint id="246" firstItem="201" firstAttribute="top" secondItem="198" secondAttribute="bottom" constant="13"/>
-                            <constraint id="247" firstItem="201" firstAttribute="leading" secondItem="198" secondAttribute="leading"/>
-                            <constraint id="248" firstItem="199" firstAttribute="leading" secondItem="201" secondAttribute="leading" constant="2"/>
-                            <constraint id="249" firstItem="199" firstAttribute="top" secondItem="201" secondAttribute="bottom" constant="1"/>
-                            <constraint id="252" firstItem="206" firstAttribute="top" secondItem="199" secondAttribute="bottom" constant="53"/>
-                            <constraint id="253" firstItem="199" firstAttribute="leading" secondItem="206" secondAttribute="leading" constant="2"/>
+                            <constraint id="1043" firstItem="197" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="1044" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="197" secondAttribute="centerY" constant="169"/>
+                            <constraint id="1047" firstItem="197" firstAttribute="leading" secondItem="1041" secondAttribute="leading" constant="26"/>
+                            <constraint id="1048" firstItem="197" firstAttribute="trailing" secondItem="1041" secondAttribute="trailing" constant="138"/>
+                            <constraint id="1049" firstItem="1041" firstAttribute="top" secondItem="197" secondAttribute="bottom" constant="32"/>
+                            <constraint id="1052" firstItem="203" firstAttribute="leading" secondItem="1041" secondAttribute="leading" constant="26"/>
+                            <constraint id="1053" firstItem="203" firstAttribute="top" secondItem="1041" secondAttribute="bottom" constant="8"/>
+                            <constraint id="1054" firstItem="204" firstAttribute="leading" secondItem="203" secondAttribute="trailing" constant="28"/>
+                            <constraint id="1055" firstItem="204" firstAttribute="top" secondItem="1041" secondAttribute="bottom" constant="7"/>
+                            <constraint id="1057" firstItem="1042" firstAttribute="top" secondItem="203" secondAttribute="bottom" constant="33"/>
+                            <constraint id="1058" firstItem="203" firstAttribute="leading" secondItem="1042" secondAttribute="leading" constant="9"/>
+                            <constraint id="1060" firstItem="198" firstAttribute="leading" secondItem="1042" secondAttribute="leading" constant="9"/>
+                            <constraint id="1061" firstItem="198" firstAttribute="top" secondItem="1042" secondAttribute="bottom" constant="8"/>
+                            <constraint id="1063" firstItem="198" firstAttribute="top" secondItem="1042" secondAttribute="bottom" constant="8"/>
+                            <constraint id="1064" firstItem="201" firstAttribute="leading" secondItem="198" secondAttribute="leading"/>
+                            <constraint id="1065" firstItem="201" firstAttribute="top" secondItem="198" secondAttribute="bottom" constant="13"/>
+                            <constraint id="1068" firstItem="199" firstAttribute="leading" secondItem="201" secondAttribute="leading" constant="2"/>
+                            <constraint id="1069" firstItem="199" firstAttribute="top" secondItem="201" secondAttribute="bottom" constant="1"/>
+                            <constraint id="1077" firstItem="206" firstAttribute="top" secondItem="199" secondAttribute="bottom" constant="38"/>
+                            <constraint id="1078" firstItem="199" firstAttribute="leading" secondItem="206" secondAttribute="leading" constant="1"/>
                         </constraints>
                     </view>
                     <connections>
@@ -111,4 +137,7 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sunny" width="650" height="491"/>
+    </resources>
 </document>
