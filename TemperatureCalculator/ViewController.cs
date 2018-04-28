@@ -89,8 +89,9 @@ namespace TemperatureCalculator
                                         (int)WindSlider.Value);
 
                 //make sure text isnt empty
-                if(FahrenheitField.Text != String.Empty)
-                    compute(sender, e);
+                if (FahrenheitField.Text == String.Empty)
+                    FahrenheitField.Text = "0";
+                compute(sender, e);
             };
 
         }
