@@ -24,14 +24,14 @@ namespace TemperatureCalculator
         {
             //equation:
             //http://www.wpc.ncep.noaa.gov/html/heatindex_equation.shtml
-            double index = 0.5 * (fehrenheit + 61 + ((fehrenheit - 68) * 1.2))
-                         + (humidity * 0.094);
+            //double index = 0.5 * (fehrenheit + 61 + ((fehrenheit - 68) * 1.2))
+            //             + (humidity * 0.094);
 
-            if (index < 80)
-                return index;
+            //if (index < 80)
+                //return index;
 
-            else
-                index = -42.379 + (2.04901523 * fehrenheit) + (10.14333127 * humidity)
+            //else
+                double index = -42.379 + (2.04901523 * fehrenheit) + (10.14333127 * humidity)
                          - (0.22475541 * fehrenheit * humidity) 
                          - (6.83783 * Math.Pow(10, -3) * Math.Pow(fehrenheit, 2))
                          - (5.481717 * Math.Pow(10, -2)  * Math.Pow(humidity, 2))
