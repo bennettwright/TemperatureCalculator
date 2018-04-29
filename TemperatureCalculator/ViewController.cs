@@ -14,17 +14,23 @@ namespace TemperatureCalculator
         private bool humid = false;
         private void compute(object sender, EventArgs args)
         {
+            if (FahrenheitField.Text == String.Empty)
+                FahrenheitField.Text = "0";
+
+            if (HumidityField.Text == String.Empty)
+                HumidityField.Text = "0";
+            
+
             if (humid)
                 ResultLabel.Text = String.Format("Result: {0} F",
                     Math.Round(calculate.getHeatIndex(Double.Parse(FahrenheitField.Text),
                         Double.Parse(HumidityField.Text) / 100)));
-            
+
             else
                 ResultLabel.Text = String.Format("Result: {0} F",
                    Math.Round(calculate.getWindChill(Double.Parse(FahrenheitField.Text),
                        (int)WindSlider.Value)));
         }
-
 
         partial void switchActionSheet(UISwitch sender)
         {
@@ -62,23 +68,21 @@ namespace TemperatureCalculator
             // Perform any additional setup after loading the view, typically from a nib.
 
             //dismiss the keyboard on background touch
-            View.AddGestureRecognizer(new UITapGestureRecognizer(() => 
+            View.AddGestureRecognizer(new UITapGestureRecognizer(() =>
             {
                 FahrenheitField.ResignFirstResponder();
                 HumidityField.ResignFirstResponder();
+
             }));
 
             HumidityField.EditingDidEnd += (sender, e) =>
             {
-                if (HumidityField.Text == String.Empty)
-                    HumidityField.Text = "0";
                 compute(sender, e);
+                HumidityLabel.Text = String.Format("Humidity: {0}%", HumidityField.Text);
             };
 
             FahrenheitField.EditingDidEnd += (sender, e) =>
             {
-                if (FahrenheitField.Text == String.Empty)
-                    FahrenheitField.Text = "0";
                 compute(sender, e);
             };
 
@@ -89,13 +93,9 @@ namespace TemperatureCalculator
                                         (int)WindSlider.Value);
 
                 //make sure text isnt empty
-                if (FahrenheitField.Text == String.Empty)
-                    FahrenheitField.Text = "0";
                 compute(sender, e);
             };
-
         }
-
 
         public override void DidReceiveMemoryWarning()
         {

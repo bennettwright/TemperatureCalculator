@@ -130,6 +130,7 @@
                         <outlet property="ResultLabel" destination="206" id="name-outlet-206"/>
                         <outlet property="ImageView1" destination="197" id="name-outlet-197"/>
                         <outlet property="WindSpeedLabel" destination="201" id="name-outlet-201"/>
+                        <outlet property="HumidityLabel" destination="1041" id="name-outlet-1041"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

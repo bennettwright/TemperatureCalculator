@@ -23,6 +23,10 @@ namespace TemperatureCalculator
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel HumidityLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UISwitch HumiditySwitch { get; set; }
 
         [Outlet]
@@ -55,6 +59,11 @@ namespace TemperatureCalculator
             if (HumidityField != null) {
                 HumidityField.Dispose ();
                 HumidityField = null;
+            }
+
+            if (HumidityLabel != null) {
+                HumidityLabel.Dispose ();
+                HumidityLabel = null;
             }
 
             if (HumiditySwitch != null) {
